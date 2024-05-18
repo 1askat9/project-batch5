@@ -10,7 +10,7 @@ variable vpc_cidr {
 
 variable subnet1_cidr {
     type = string
-    description = "Provide vpc cidr block"
+    description = "Provide subnet1 cidr block"
 }
 
 variable subnet2_cidr {
@@ -24,10 +24,9 @@ variable subnet3_cidr {
 }
 
 variable ip_on_launch {
-    type =bool
+    type = bool
 }
 
-variable  instance_type {
+variable instance_type {
     type = string
-  
 }

@@ -1,4 +1,3 @@
-
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -18,7 +17,6 @@ data "aws_ami" "ubuntu" {
 resource "aws_key_pair" "deployer" {
   key_name   = "ubuntu-key"
   public_key = file("~/.ssh/id_rsa.pub")
- 
 }
 
 resource "aws_instance" "web" {
@@ -27,7 +25,6 @@ resource "aws_instance" "web" {
   instance_type = var.instance_type
   subnet_id = aws_subnet.main.id
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
- 
 }
 
 output ec2 {
